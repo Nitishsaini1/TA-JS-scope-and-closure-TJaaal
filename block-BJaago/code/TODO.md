@@ -55,6 +55,7 @@ function sayHi() {
   var age = 21;
 }
 
+
 sayHi();
 ```
 
