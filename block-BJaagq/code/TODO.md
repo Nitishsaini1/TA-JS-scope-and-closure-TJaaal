@@ -3,7 +3,6 @@ Create a execution context diagram of the following code on your notebook. Take 
 - Take in account the different phases of execution, different execution contexts
 
 1.
-
 ```js
 var species = 'human';
 
@@ -81,4 +80,4 @@ console.log(one, two, three, four); // 5
 ![](./img/image-name.jpg)
 
 - Create the execution context diagram
-- What will be the value of 1, 2, 3, 4 and 5 or error if the code does not work
+- What will be the value of 1, 2, 3, 4 and 5 or error if the code does not work 
