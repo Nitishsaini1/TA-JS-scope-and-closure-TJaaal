@@ -18,7 +18,7 @@ console.log(species); // 2
 
 <!-- Put your image below -->
 
-![](./img/image-one.jpg)
+![](./img/image-one.png)
 
 - Create the execution context diagram
 - What will be the value of species on 1 and 2
@@ -46,7 +46,7 @@ topLevelFn();
 
 <!-- Put your image below -->
 
-![](./img/image-two.jpg)
+![](./img/image-two.png)
 
 - Create the execution context diagram
 - What will be the value of 1 and 2
@@ -77,7 +77,7 @@ console.log(one, two, three, four); // 5
 
 <!-- Put your image below -->
 
-![](./img/image-three.jpg)
+![](./img/image-three.png)
 
 - Create the execution context diagram
 - What will be the value of 1, 2, 3, 4 and 5 or error if the code does not work 
