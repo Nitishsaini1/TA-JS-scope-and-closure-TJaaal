@@ -18,6 +18,7 @@ function multiplyBy5(n) {
 }
 let numbersAddedFive = multiplyArrayByN(marks, addFive);
 let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
+
 ```
 
 2. Create the execution context diagram of the above code snippet
@@ -26,7 +27,8 @@ let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
 
 ```js
 function operation(n, opFn) {
-  // your code goes her
+  // your code goes here
+
 }
 // TEST
 console.log(
@@ -35,12 +37,14 @@ console.log(
   })
 );
 // Output: 2.1
+
 console.log(
   operation(10, function (n) {
     return (n * n) / 5;
   })
 );
 // Output: 20
+
 ```
 
 4. Write a higher order function that accepts a string and a operation function (callback function). Call the callback function passing the string as argument and return the returned value.
