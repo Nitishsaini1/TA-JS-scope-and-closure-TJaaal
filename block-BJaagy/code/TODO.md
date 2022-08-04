@@ -10,7 +10,13 @@ Have `map` return a new array filled with values that are the result of the 'cal
 
 ```js
 // Your code goes here
-
+function map(arr,cb){
+  let newArr=[];
+  for(let i=0; i<arr.lrngth;i++){
+    newArr[i]=cb(arr[i]);
+  }
+  return newArr;
+}
 // Test Your Code
 function multiplyByTwo(n) {
   return n * 2;
@@ -24,7 +30,13 @@ multiplyByTwo(2); //-> 4
 
 ```js
 // Your code goes here
-
+function forEach(arr,cb){
+let Arr=[];
+for(let i=0;i<arr.length;i++){
+  Arr[i]=cb(arr[i])
+}
+return Arr;
+}
 // Test Your Code
 let alphabet = '';
 let letters = ['a', 'b', 'c', 'd'];
@@ -37,6 +49,13 @@ console.log(alphabet); //prints 'abcd'
 5. Create higher-order function called `filter` takes an array and a callback, and runs the callback on each element of the array if the return value of callback is `truthy` store in new array return the new array.
 
 ```js
+function filter(array,cb){
+  let filterArray = [];
+  for ( let i = 0 ; i < array.length ; i++ ){
+    filterArray.push(cb(array[i]))
+  }
+   return filterArray;
+}
 // Test Your Code
 
 var numbers = [1, 3, 5, 4, 7, 89, 234, 20];
