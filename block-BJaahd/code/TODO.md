@@ -35,6 +35,7 @@ counter.value(); // output
 2. Create the execution context diagram and write the output.
 
 ```js
+
 function makeCounter() {
   let privateCounter = 0;
   function changeBy(val) {
@@ -58,14 +59,14 @@ function makeCounter() {
 let counter1 = makeCounter();
 let counter2 = makeCounter();
 
-console.log(counter1.value());  // OUTPUT
+console.log(counter1.value());  //  
 
 counter1.increment();
 counter1.increment();
-console.log(counter1.value()); // OUTPUT
+console.log(counter1.value()); //  
 
 counter1.decrement();
-console.log(counter1.value()); // OUTPUT
-console.log(counter2.value()); // OUTPUT
+console.log(counter1.value()); //  
+console.log(counter2.value()); //  
 ```
 <!--  -->
