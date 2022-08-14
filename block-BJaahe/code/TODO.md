@@ -156,8 +156,6 @@ arya.lower(); // 3500
 ```js
 // Your code goes here
 
-
-
 let arya = nameFactory('Arya', 'Stark');
 arya.getFullName(); // "Arya Stark"
 arya.setFirstName('Jon'); // "Jon Stark"
@@ -171,6 +169,7 @@ The returned function accepts a string (children) and returns the children with 
 ```js
 function createTag() {
   // your code goes here
+
 }
 
 let bold = createTag('b');
