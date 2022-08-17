@@ -1,5 +1,6 @@
 ## Getting to understand Higher Order Function Properly
 
+
 1. Write a higher-order function `loop` that provides something like a for loop statement. It takes a start value, a test function, an update function, and a body function.
 
 - Use the start value as the initial value for the loop
