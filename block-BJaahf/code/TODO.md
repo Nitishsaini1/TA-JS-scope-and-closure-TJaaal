@@ -1,5 +1,4 @@
-## Getting to understand Higher Order Function Properly
-
+## Getting to understand Higher Order Function Properl
 
 1. Write a higher-order function `loop` that provides something like a for loop statement. It takes a start value, a test function, an update function, and a body function.
 
@@ -25,6 +24,7 @@ loop(
 // → 2
 // → 1
 ```
+
 
 2. The function `reduce` takes an array and reduces the elements to a single value. For example it can sum all the numbers, multiply them, or any operation that you can put into a function.
 
