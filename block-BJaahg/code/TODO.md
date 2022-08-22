@@ -10,9 +10,9 @@ const lastName = 'Stark';
 var knownAs = 'no one';
 
 console.log(
-  window.firstName,
-  window.lastName,
-  window.knownAs
+  window.firstName, //undefined
+  window.lastName, //undefined
+  window.knownAs //no one
 );
 ```
 
@@ -27,7 +27,7 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName)); //Arya Stark
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
@@ -38,7 +38,7 @@ fucntion addOne(num){
 }
 var one = addOne(0);
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two);  //Uncaught SyntaxError: Unexpected identifier
 ```
 
 4. Make a Execution Context Diagram for the following JS and write the output.
@@ -49,7 +49,7 @@ fucntion addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two); //1,2
 ```
 
 5. Make a Execution Context Diagram for the following JS and write the output.
@@ -60,7 +60,7 @@ fucntion addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(two);
+console.log(two); //2
 ```
 
 6. Make a Execution Context Diagram for the following JS and write the output.
@@ -77,7 +77,7 @@ console.log(two);
 7. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
-console.log(addOne(0));
+console.log(addOne(0)); //Uncaught ReferenceError: Cannot access 'addOne' before initialization 
 const addOne = (num) => {
   return num + 1;
 };
@@ -93,9 +93,9 @@ function isAwesome() {
   if (false) {
     awesome = true;
   }
-  console.log(awesome);
+  console.log(awesome);  //undefiend
 }
-isAwesome();
+isAwesome(); //undefiend
 ```
 
 9. What will be the output of the following
@@ -106,9 +106,9 @@ function isAwesome() {
   if (true) {
     awesome = true;
   }
-  console.log(awesome);
+  console.log(awesome); //true
 }
-isAwesome();
+isAwesome(); //undefiend
 ```
 
 10. What will be the output of the following
@@ -119,9 +119,9 @@ function isAwesome() {
   if (false) {
     awesome = true;
   }
-  console.log(awesome);
+  console.log(awesome);  // undefined
 }
-isAwesome();
+isAwesome();  // undefined
 ```
 
 11. What will be the output of the following
@@ -135,7 +135,7 @@ function fullName(a, b) {
   return a + b;
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name); //Arya Stark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +146,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name); //By default name is a empty string  
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +155,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // Arya Stark because name is define by the var keyword so it is behave like globel scope
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +164,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name);// By default name is a empty string
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +173,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); //20
 ```
 
 16. Guess the output of the code below with a reason.
@@ -182,7 +182,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // Uncaught ReferenceError: i is not defined
 ```
 
 17. Guess the output and the reason behind that.
@@ -192,7 +192,7 @@ function sample() {
   if (true) {
     var username = 'John Snow';
   }
-  console.log(username);
+  console.log(username);  //John Snow
 }
 sample();
 ```
@@ -204,7 +204,7 @@ function sample() {
   if (true) {
     let username = 'John Snow';
   }
-  console.log(username);
+  console.log(username); // Uncaught ReferenceError: username is not defined because username is define by the let keyword and lety keyword create block scope 
 }
 sample();
 ```
@@ -230,9 +230,9 @@ function sample() {
   let username = 'Arya Stark';
   if (true) {
     let username = 'John Snow';
-    console.log(username, 'first');
+    console.log(username, 'first'); //John Snow first 
   }
-  console.log(username, 'second');
+  console.log(username, 'second'); //Arya stark second 
 }
 sample();
 ```
@@ -243,7 +243,10 @@ sample();
 function sample(...args) {
   for (let i = 0; i < args.length; i++) {
     let message = `Hello I am ${args[i]}`;
-    console.log(message);
+    console.log(message); // Hello I am First 
+                          // Hello I am Second
+                          // Hello I am Third
+
   }
 }
 
@@ -256,7 +259,10 @@ sample('First', 'Second', 'Third');
 function sample(...args) {
   for (let i = 0; i < args.length; i++) {
     const message = `Hello I am ${args[i]}`;
-    console.log(message);
+    console.log(message);// Hello I am First 
+                          // Hello I am Second
+                          // Hello I am Third
+
   }
 }
 
@@ -270,7 +276,8 @@ if (true) {
   const myFunc = function () {
     console.log(username, 'Second');
   };
-  console.log(username, 'First');
+  console.log(username, 'First'); 
+    console.log(username, 'First');  // Uncaught ReferenceError: Cannot access 'username' before initialization
   let username = 'Hello World!';
   myFunc();
 }
@@ -284,7 +291,7 @@ function outer() {
   function inner() {
     console.log(
       `I love this movie called ${movie.toUpperCase()}`
-    );
+    ); //  I love this movie called MAD MAX: FURY ROAD
   }
   inner();
 }
@@ -301,7 +308,7 @@ function outer() {
     let movie = 'Before Sunrise';
     console.log(
       `I love this movie called ${movie.toUpperCase()}`
-    );
+    ); // I love this movie called BEFORE SUNRISE
   }
   inner();
 }
@@ -320,7 +327,7 @@ function outer() {
       let movie = 'Gone Girl';
       console.log(
         `I love this movie called ${movie.toUpperCase()}`
-      );
+      ); // VM282:4 I love this movie called GONE GIRL
     }
     extraInner();
   }
