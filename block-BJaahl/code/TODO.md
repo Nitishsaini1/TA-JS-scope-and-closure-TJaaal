@@ -3,6 +3,9 @@
 ```js
 function once(cb) {
   // your code goes here
+   return function(sayHello){
+    alert cb(sayHello)
+  }
 }
 
 // TEST
@@ -19,6 +22,10 @@ log(); // return undefinde (can't be called twice)
 ```js
 function once(cb) {
   // your code goes here
+   return function (){
+    return console.log(cb(msg))
+  }
+
 }
 
 // TEST
@@ -36,6 +43,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest
 ```js
 function once(cb) {
   // your code goes here
+  return function(){
+  return console.log(cb(a1,a2))
+}
 }
 
 // TEST
@@ -49,6 +59,12 @@ log(); // return undefinde (can't be called twice)
 ```js
 function nTimes(cb, times, ...rest) {
   // your code goes here
+    return function(){
+    for(i=0;i<times;i++){
+      
+return console.log(`${i++}`,`${cb(...rest)}`);
+  }
+ }
 }
 
 // TEST
